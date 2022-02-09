@@ -28,17 +28,17 @@ CONTENTS
 * README.TXT.
 
 The XML files with the annotated text are in the CROMER format (see references Gerardi et al 2014).  This format distinguishes mentions from instances using identifiers. Coreference relations and other semantic relations are expressed between identifiers of entities and events. Instance identifiers refer back to mention in the text, which is represented as separate tokens. E.g.:
-
+```
 <ACTION_OCCURRENCE m_id="67"  >
   <token_anchor t_id="195"/>
-
+```
 represents a mention of an action anchored to the token with identifier "195", which is the word "plea" in the file 1_1ecbplus.xml. Cross-document coreference relations are expressed between mentions as between mention "67" and mention "89". 
-
+```
 <CROSS_DOC_COREF r_id="21700" note="ACT15743050988266116" >
   <source m_id="67" />
   <target m_id="89" />
 </CROSS_DOC_COREF>
-
+```
 The CROSS_DOC_COREF element has a nore attribute that functions as the instance identifier of the action. These instance identifiers establish cross-document coreferences.
 
 When using this resource in publications please cite:
